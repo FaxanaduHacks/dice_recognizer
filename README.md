@@ -11,7 +11,7 @@ Note: the detection happens with rectangular bounding boxes because it's more ac
 
 ## Usage
 
-Run with python or make the script executable, your choice:
+Run with Python or make the script executable, your choice:
 
 ```python
 python3 dice-recognizer.py
