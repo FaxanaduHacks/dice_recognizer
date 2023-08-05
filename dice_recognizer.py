@@ -31,7 +31,6 @@
 #               + 2023-06-30 - File created. -Faxanadu
 ################################################################################
 
-#!/usr/bin/env python3
 import cv2
 import numpy as np
 
