@@ -3,10 +3,12 @@
 import cv2
 import numpy as np
 
-# This class is responsible for recognizing and processing dice faces in a
-# video stream and incapsulates the functionality to detect, recognize and
-# track dice faces:
 class DiceRecognizer:
+    """
+    This class is responsible for recognizing and processing dice faces in a
+    video stream and incapsulates the functionality to detect, recognize and
+    track dice faces:
+    """
     def __init__(self):
         self.bounding_boxes = []    # List to store dice bounding boxes.
         self.threshold_value = 0    # Initial threshold for image binarization.
@@ -30,9 +32,11 @@ class DiceRecognizer:
     def on_aspect_ratio_max_change(self, value):
         self.aspect_ratio_max = value / 10.0
 
-    # Create a window with trackbars to adjust some parameters used in the dice
-    # recognition algorithm:
     def create_trackbars_window(self):
+        """
+        Create a window with trackbars to adjust some parameters used in the
+        dice recognition algorithm:
+        """
         # Create a window with trackbars to adjust parameters:
         cv2.namedWindow("Settings")
         cv2.createTrackbar("Threshold",
@@ -51,10 +55,12 @@ class DiceRecognizer:
                            20,
                            self.on_aspect_ratio_max_change)
 
-    # Process the the input frames to detect and extract dice faces by
-    # gray scaling the imagine, applying a Gaussian blur to reduce noise. It
-    # uses imagine binarization using Otsu's thresholding method.
     def process_dice_frames(self, frame):
+        """
+        Process the the input frames to detect and extract dice faces by
+        gray scaling the imagine, applying a Gaussian blur to reduce noise. It
+        uses imagine binarization using Otsu's thresholding method.
+        """
         # Preprocess the frame to detect and extract dice faces:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         blur = cv2.GaussianBlur(gray, (5, 5), 0)
@@ -100,9 +106,11 @@ class DiceRecognizer:
 
         return dice_faces, dice_bounding_boxes
 
-    # This method is responsible for recognizing the number of pips (dots) on a
-    # single dice face:
     def recognize_dice_value(self, dice_face):
+        """
+        This method is responsible for recognizing the number of pips (dots) on
+        a single dice face:
+        """
         # Recognize the value of a dice face by counting the circular pips:
         _, thresholded = cv2.threshold(dice_face,
                                        0,
@@ -130,9 +138,11 @@ class DiceRecognizer:
 
         return max(circular_pips - 1, 0)  # Ensure a minimum value of 0.
 
-    # This method is responsible for updating and tracking the values obtained
-    # from recognizing the pips on the dice faces:
     def update_dice_values(self, dice_value):
+        """
+        This method is responsible for updating and tracking the values
+        obtained from recognizing the pips on the dice faces:
+        """
         # Update the list of recognized dice values and perform voting to
         # determine the most frequent value:
         self.dice_values.append(dice_value)
