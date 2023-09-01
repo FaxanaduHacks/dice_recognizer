@@ -30,7 +30,7 @@ have black pips and works as well.
 Run with Python or make the script executable, your choice:
 
 ```python
-python3 dice-recognizer.py
+python3 dice_recognizer.py
 ```
 
 While the script is running:
