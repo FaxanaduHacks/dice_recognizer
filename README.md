@@ -54,13 +54,12 @@ Note: The detection happens with rectangular bounding boxes because it's more ac
 
 Feel free to modify the program according to your requirements. You can experiment with parameter values, add more features, or integrate the dice recognition functionality into larger projects.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Acknowledgments
 
 This program utilizes the OpenCV library for computer vision tasks. Credits to the OpenCV community for their contributions.
 
 The development of this application benefited from the assistance of language models, including GPT-3.5 and GPT-4, provided by OpenAI. The author acknowledges the valuable contributions made by these language models in generating design ideas and providing insights during the development process.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
