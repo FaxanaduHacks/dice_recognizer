@@ -7,7 +7,7 @@ and contours.
 
 The bounding boxes are actually used to detect the dice frames and later the bounding circles for visual representation of what was actually detected. This script seems to work well with various dice of multiple colors and sizes (including translucent dice that can throw off weird reflections).
 
-There is a second window for settings and trackbars to adjust the settings in real-time to aid with calibration in various lighting environments. I recommend keeping it around 1.8 or 0.9 depending on the lighting. The default threshold for circularity is 0.6.
+There is a second window for settings and trackbars to adjust the settings in real-time to aid with calibration in various lighting environments. I recommend keeping it around 0.9 (aspect_ratio_min) and 1.2 (aspect_ratio_max), but this depends on the lighting. The default threshold for circularity is 0.6.
 
 Note: The detection happens with rectangular bounding boxes because it's more accurate while the circular bounding boxes are drawn to show what was detected to the user and should be on the edges of the pips. The program was tested with dice that have white pips: however, it was also tested with white dominos that have black pips and works as well.
 
