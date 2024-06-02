@@ -32,6 +32,11 @@ Note: The detection happens with rectangular bounding boxes because it's more ac
 
 4. Press the 'q' key to exit the program.
 
+### Demo
+![Camera Rig Setup](https://github.com/FaxanaduHacks/dice_recognizer/Backdrop.png "Using a white piece of paper for a backdrop, camera positioned facing the desk.")
+
+![Dice Recognizer Demonstration](https://github.com/FaxanaduHacks/dice_recognizer/Demonstration.png "Demonstrates live detection and counting of pips, also shows the sliders window.")
+
 ## Features
 
 - **Dice Detection:** The program detects dice faces in real-time using image preprocessing, binarization, and contour analysis.
